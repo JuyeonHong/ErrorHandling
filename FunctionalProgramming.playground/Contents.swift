@@ -206,3 +206,27 @@ struct Sample: CustomStringConvertible {
 
 let sample = Sample(name: "ham", memo: "burder")
 print(sample.description)
+
+/*
+ flatMap
+ - nil이 아닌 결과들을 가지는 배열 리턴 (=>
+ 1차원 배열에서 nil을 제고하고 옵셔널 바인딩을 하고 싶을 때 compactMap 사용
+ 2차원 배열을 1차원 배열로 flatten하게 만들 때 flatMap 사용)
+ - 주어진 sequence내 요소들을 하나의 배열로 리턴
+ - 주어진 optional이 nil인지 아닌지 판단 후 unwrapping해서 closure 파라미터로 전달
+ */
+
+let optionalArray: [Int?] = [1, 2, 3, 4, nil]
+let compactMappedArray = optionalArray.compactMap { $0 } // [1, 2, 3, 4]
+
+let nestedArray = [[1, 2, 3, 4], [4, 5, 6], [7, 8, 9]]
+let flatMappedNestedArray = nestedArray.flatMap { $0 } // [1, 2, 3, 4, 4, 5, 6, 7, 8, 9]
+
+let optionalInt: String? = "3"
+let flatMappedOptionalString = optionalInt.flatMap { Int($0) } // Optional(3)
+let mappedOptionalString = optionalInt.map { Int($0) } // Optional(Optional(3))
+
+let possibleNumbers = ["1", "2", "three", "///4///", "5"]
+let mapped: [Int?] = possibleNumbers.map { str in Int(str)}
+let conmpactMapped: [Int] = possibleNumbers.compactMap { str in Int(str) }
+print(conmpactMapped)
