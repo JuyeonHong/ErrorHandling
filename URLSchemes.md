@@ -25,13 +25,13 @@
 - 앱이 실행되지 않은 경우, **didFinishLaunchingWithOptions**와 **openURL** 호출  
 
 ## Built-in URL Scheme  
-- **https://**URL : 사파리 앱을 통한 웹사이트 표시
-- **mailto**이메일 주소 : 메일 앱을 통해 새로운 메일 작성 화면 표시 
+- **https://** URL : 사파리 앱을 통한 웹사이트 표시
+- **mailto** 이메일 주소 : 메일 앱을 통해 새로운 메일 작성 화면 표시 
 - **tel** 전화번호 : 전화 연결
 - **sms** 전화번호 : 메시지 앱을 통한 메시지 작성 화면 표시
-- **facetime**FaceTime ID : 페이스타임 연결
-- **http://maps.apple.com/?q=**검색어 : 지도 앱을 통한 지역표시
-- **http://maps.apple.com/?ll=**위도, 경도 : 지도 앱을 통한 지역표시
+- **facetime** FaceTime ID : 페이스타임 연결
+- **http://maps.apple.com/?q=** 검색어 : 지도 앱을 통한 지역표시
+- **http://maps.apple.com/?ll=** 위도, 경도 : 지도 앱을 통한 지역표시
 
 - 웹사이트, 지도 이외의 url scheme은 시뮬레이터에서 지원하지 않으므로 디바이스에서 확인해야함.
 
